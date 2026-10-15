@@ -198,6 +198,11 @@ Conversion Performance
 | Women's Email | 21,387 | 189 | 0.88% |
 | No Email | 21,306 | 122 | 0.57% |
 
+
+Conversion Rate Visualization
+
+![Conversion Rate by Email Campaign](conversion_comparison.png)
+  
 Interpretation
 
 The Men's Email group achieved the highest observed conversion rate, followed by Women's Email and the No Email control group.

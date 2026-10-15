@@ -269,7 +269,11 @@ Revenue Comparison
 | Women's Email | $1.08 |
 | No Email | $0.65 |
 
-#Estimated Incremental Revenue
+Revenue per Customer Visualization
+
+![Revenue per Customer Comparison](revenue_comparison.png)
+
+Estimated Incremental Revenue
 
 Average revenue improvement:Approximately $0.77 per customer.
 

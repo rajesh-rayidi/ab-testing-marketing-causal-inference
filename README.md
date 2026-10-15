@@ -224,6 +224,21 @@ The two-proportion Z-test returned:
 | Significance level | 0.05 |
 | Statistical decision | Reject H₀ |
 
+
+Multiple Hypothesis Testing: All Campaign Comparisons
+
+Three two-sided proportion Z-tests were conducted to compare all experimental groups. Holm correction was applied to control the family-wise error rate.
+
+| Comparison | Conversion Lift (pp) | Holm-Adjusted P-value | Result |
+
+| Men's Email vs. No Email | +0.681 | 4.57e-13 | Significant |
+| Women's Email vs. No Email | +0.311 | 0.000314 | Significant |
+| Men's Email vs. Women's Email | +0.369 | 0.000314 | Significant |
+
+All comparisons remained statistically significant at the 5% significance level after Holm correction.
+
+Business interpretation: Both email treatments significantly increased purchase conversion compared with No Email. Men's Email also outperformed Women's Email on conversion rate. Profitability and campaign costs still need to be evaluated.
+  
 nterpretation
 
 The p-value is substantially below 0.05, providing strong evidence against equal conversion probabilities.
@@ -308,11 +323,15 @@ However, additional information about campaign costs, discounts, contribution ma
 
 11. Business Recommendations
 
-Recommendation 1: Consider Further Deployment of the Men's Email Campaign
+Recommendation 1: Prioritize the Men's Email Campaign for Further Deployment
 
-The Men's Email treatment produced positive conversion and revenue estimates compared with the control.
+The Men's Email campaign demonstrated the strongest conversion performance among the three experimental groups, achieving a 1.25% conversion rate compared with 0.88% for Women's Email and 0.57% for the No Email control group.
 
-The results support further consideration of the campaign, subject to cost and operational constraints.
+Statistical analysis confirmed that the Men's Email campaign significantly outperformed both the No Email and Women's Email groups. These differences remained statistically significant after applying the Holm correction for multiple hypothesis testing.
+
+Additionally, the Men's Email campaign generated an estimated $0.77 in incremental revenue per customer compared with the control group, corresponding to approximately $16,403 in estimated additional revenue across the Men's Email treatment group.
+
+Business Recommendation: Prioritize the Men's Email campaign for further evaluation and potential expansion. Before full deployment, assess campaign costs, customer-level profitability, and the uncertainty around revenue differences between the email treatments to ensure the strategy delivers sustainable business value.
 
 Recommendation 2: Evaluate Incremental Profitability
 
@@ -338,30 +357,87 @@ Future analysis could examine treatment effectiveness across:
 
 Subgroup comparisons should use appropriate statistical safeguards to avoid misleading conclusions from multiple tests.
 
-Recommendation 4: Compare All Experimental Treatments
+Recommendation 4: Leverage Multiple Hypothesis Testing to Optimize Campaign Selection
 
-Although Men's Email achieved the highest observed revenue and conversion rates, additional formal testing is required to evaluate differences between Men's Email and Women's Email.
+A comprehensive statistical comparison was conducted across all three experimental groups using two-sided proportion Z-tests with the Holm correction to control for multiple testing.
 
-A full campaign recommendation should consider all experimental arms and adjust for multiple comparisons where appropriate.
+The results demonstrated that both promotional email campaigns significantly improved purchase conversion rates compared with the No Email control group.
 
+Furthermore, the Men's Email campaign achieved a statistically significantly higher conversion rate than the Women's Email campaign.
+
+Key Statistical Findings:
+
+Campaign Comparison
+
+Conversion Lift
+
+Adjusted P-value
+
+Men's Email vs. No Email
+
++0.681 percentage points
+
+4.57e-13
+
+Women's Email vs. No Email
+
++0.311 percentage points
+
+0.000314
+
+Men's Email vs. Women's Email
+
++0.369 percentage points
+
+0.000314
+
+All three comparisons remained statistically significant at the 5% significance level after adjustment.
+
+Business Recommendation: Prioritize the Men's Email campaign for further evaluation based on its superior conversion performance. Conduct additional revenue significance tests, profitability assessments, and customer segmentation analyses before deciding on a broader rollout.
 
 12. Limitations
 
-This analysis has several important limitations:
+Although this project provides statistically supported insights into the effectiveness of email marketing campaigns, several limitations should be considered when interpreting the results and making business decisions.
 
-Historical dataset: Results reflect the customers and marketing context captured by the experiment.
+1. Historical Dataset
 
-External validity: Treatment effects may differ across organizations, customer populations, products, or periods.
+The analysis uses the historical Hillstrom Email Marketing Dataset, consisting of 64,000 customer observations. Customer behavior, market conditions, and marketing strategies may have changed since the experiment was conducted.
 
-Revenue versusprofit: Revenue impact does not include marketing costs or product margins.
+2. External Validity and Generalizability
 
-Incomplete pairwise comparisons: The formal hypothesis test and confidence intervals reported here focus on Men's Email versus No Email.
+The estimated treatment effects reflect the experimental population and may not generalize to other businesses, customer segments, geographic markets, or future campaigns. Additional testing would be necessary to validate performance in different environments.
 
-Bootstrap uncertainty: The bootstrap interval provides an estimated sampling-uncertainty range and depends on resampling and experimental assumptions.
+3. Revenue Versus Profitability
 
-Customer segmentation: Treatment-effect differences across customer subgroups have not yet been evaluated.
+Although the Men's Email campaign demonstrated positive estimated incremental revenue, the analysis does not incorporate campaign delivery expenses, promotional discounts, product contribution margins, or operational costs. Therefore, higher revenue does not necessarily imply higher profitability.
 
+4. Multiple Hypothesis Testing and Revenue Comparisons
 
+All three pairwise conversion-rate comparisons were completed using two-sided proportion Z-tests with Holm adjustment to control the family-wise error rate.
+
+The results demonstrated statistically significant differences across all three campaign comparisons.
+
+However, formal revenue comparisons between the Men's Email and Women's Email treatments have not yet been performed. Additional confidence intervals and statistical tests would strengthen conclusions about their relative financial performance.
+
+5. Bootstrap Estimation Uncertainty
+
+The revenue analysis used 2,000 bootstrap resamples to estimate a 95% confidence interval for the average revenue difference between Men's Email and No Email.
+
+Although the resulting interval supported a positive revenue effect, bootstrap estimates depend on the sampling procedure and underlying assumptions. Additional robustness checks could strengthen the analysis.
+
+6. Customer Segmentation and Heterogeneous Treatment Effects
+
+The current analysis focuses on average treatment effects across experimental groups.
+
+It does not yet investigate whether email effectiveness differs across customer segments, such as new versus returning customers, historical spending levels, purchasing preferences, or geographic characteristics.
+
+Future analysis could investigate these differences through subgroup analysis and heterogeneous treatment effect modeling.
+
+7. Long-Term Customer Impact
+
+The analysis measures outcomes captured in the dataset's observation period. It does not establish whether promotional emails improve long-term customer retention, lifetime value, or repeat purchase behavior.
+
+Further longitudinal analysis would be required to evaluate sustained business impact.
 13. Future Enhancements
 
 The project could be extended through:
